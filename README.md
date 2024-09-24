@@ -1,71 +1,57 @@
-# Getting Started with Create React App
+# Library Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application for managing library resources with two user profiles: Admin and User.
+## Credentials 
 
-## Available Scripts
+## For admin - admin
+## FOr admin password - admin123
 
-In the project directory, you can run:
+## For user - user1 
+## FOr user password - user123
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Admin Profile
+- *Create Books*: Add new books to the library.
+- *View Requests*: Manage user requests for loans and returns.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### User Profile
+- *Browse Books*: View available books.
+- *Request Books*: Borrow books from the library.
+- *Return Books*: Manage borrowed books.
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
+- Web browser
+- Internet connection
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Library-Management
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Aditya-SRM/Library-Management
+### Navigate to the project directory:
+### bash
+### Copy code
+### cd library-management-system
+### Install dependencies (if applicable):
+### bash
+### Copy code
+### npm install
+### Usage
+### Open your browser and go to http://localhost:3000.
+### Log in with Admin or User credentials.
+### Technologies Used
+### React, JavaScript and Tailwind
+### Firebase
+### Database: Firebase
+### Contributing
+### Fork the repository and submit a pull request with your changes.
+### 
+### License
+### This project is licensed under the MIT License.
+### 
+### Contact
+### For questions, reach out at [sadityakumar38@gmail.com].
+### 
+### Happy borrowing! 📚
