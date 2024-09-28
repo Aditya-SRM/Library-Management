@@ -10,7 +10,7 @@ const Membership = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Submit logic goes here
+
     alert(`Membership Number: ${membershipNumber} | Extension Period: ${extensionPeriod}`);
   };
 

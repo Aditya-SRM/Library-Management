@@ -3,18 +3,18 @@ import { useNavigate } from 'react-router-dom';
 
 const PayFine = () => {
   const [finePaid, setFinePaid] = useState(false);
-  const [fineAmount, setFineAmount] = useState(0); // Initial state for fine amount
-  const navigate = useNavigate(); // Initialize the navigate function
+  const [fineAmount, setFineAmount] = useState(0); 
+  const navigate = useNavigate(); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (fineAmount === 0) {
       alert('No fine. Transaction complete.');
-      navigate('/dashboard'); // Navigate to Dashboard
+      navigate('/dashboard'); 
     } else if (finePaid) {
       alert('Fine paid. Transaction complete.');
-      navigate('/dashboard'); // Navigate to Dashboard
+      navigate('/dashboard'); 
     } else {
       alert('Please pay the fine to complete the transaction.');
     }
@@ -30,8 +30,8 @@ const PayFine = () => {
             <input
               type="number"
               value={fineAmount}
-              onChange={(e) => setFineAmount(Number(e.target.value))} // Update fine amount on change
-              min="0" // Prevent negative values
+              onChange={(e) => setFineAmount(Number(e.target.value))} 
+              min="0" 
               className="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
