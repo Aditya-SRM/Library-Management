@@ -1,52 +1,70 @@
 import React, { useState } from 'react';
 
-const UserManagement = () => {
-  const [username, setUsername] = useState('');
-  const [userType, setUserType] = useState('new');
+const Membership = () => {
+  const [membershipNumber, setMembershipNumber] = useState('');
+  const [extensionPeriod, setExtensionPeriod] = useState('6 months');
+  
+  const handleNumberChange = (e) => {
+    setMembershipNumber(e.target.value);
+  };
 
-  const handleUserSubmit = () => {
-    if (!username) {
-      alert('User name is required');
-    } else {
-      alert(`User ${userType} added: ${username}`);
-      // Clear input fields after submission
-      setUsername('');
-      setUserType('new');
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Submit logic goes here
+    alert(`Membership Number: ${membershipNumber} | Extension Period: ${extensionPeriod}`);
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-100 to-blue-300 p-4">
-      <h1 className="text-4xl font-bold mb-6 text-blue-900">User Management</h1>
-      <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md transition-transform transform hover:scale-105">
-        <label className="block mb-2 text-sm font-medium text-gray-800">User Type</label>
-        <select
-          onChange={(e) => setUserType(e.target.value)}
-          className="block w-full mb-4 p-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-500 focus:border-blue-500"
-        >
-          <option value="new">New User</option>
-          <option value="existing">Existing User</option>
-        </select>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-100 to-blue-200 p-4">
+      <form className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md transition-transform transform hover:scale-105" onSubmit={handleSubmit}>
+        <h2 className="text-4xl font-bold mb-6 text-blue-800">Update Membership</h2>
+        
+        <div className="mb-4">
+          <label htmlFor="membershipNumber" className="block text-gray-700 font-medium mb-2">
+            Membership Number (required)
+          </label>
+          <input
+            id="membershipNumber"
+            type="text"
+            value={membershipNumber}
+            onChange={handleNumberChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter membership number"
+            required
+          />
+        </div>
 
-        <label className="block mb-2 text-sm font-medium text-gray-800">User Name</label>
-        <input
-          type="text"
-          placeholder="Enter user name"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          className="block w-full mb-4 p-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-500 focus:border-blue-500"
-          required
-        />
+        <div className="mb-4">
+          <label className="block text-gray-700 font-medium mb-2">Extend Membership By</label>
+          <select
+            value={extensionPeriod}
+            onChange={(e) => setExtensionPeriod(e.target.value)}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="6 months">6 months</option>
+            <option value="12 months">12 months</option>
+            <option value="24 months">24 months</option>
+          </select>
+        </div>
 
-        <button
-          onClick={handleUserSubmit}
-          className="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 transition duration-200 shadow-md"
-        >
-          Submit
-        </button>
-      </div>
+        <div className="flex justify-between mt-6">
+          <button
+            type="submit"
+            className="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 transition duration-200 shadow-md"
+          >
+            Update Membership
+          </button>
+          <button
+            type="button"
+            className="w-full bg-red-600 text-white p-2 rounded-md hover:bg-blue-700 transition duration-200 shadow-md"
+            onClick={() => alert('Membership Cancelled')}
+          >
+            Cancel Membership
+          </button>
+        </div>
+      </form>
     </div>
   );
 };
 
-export default UserManagement;
+export default Membership;
